@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>AID Privacy Policy</h1>
-<p>Last updated: 4 November 2026</p>
+<p>Last updated: 10 November 2026</p>
 
 <p>AID ("the app") tells you whether an image or a video is likely to be AI-generated. This policy explains what the app does with your data. The short version: <strong>your photos and videos never leave your device</strong>.</p>
 
@@ -44,12 +44,21 @@
 <h2>Error reports (Firebase Crashlytics)</h2>
 <p>When the app hits a technical error, it may send a report to Google through Firebase Crashlytics. The report contains the type of error and where it occurred in the code, the device model, the operating system version, the state of the app and a random identifier of the installation. It does not contain your photos or videos, nor the content of the files you analyse. We use it only to find and fix stability problems, on the basis of our legitimate interest in keeping the app stable (Art. 6(1)(f) GDPR). Reports are sent only by the version of the app published on the stores. Google processes this data under the <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 
-<h2>Purchases</h2>
-<p>In-app purchases are handled by Google Play or the Apple App Store. We do not receive your payment details: the store only tells the app that a purchase was completed.</p>
+<h2>Purchases and purchase verification</h2>
+<p>In-app purchases are handled by Google Play or the Apple App Store. We do not receive your payment details.</p>
+<p>To make sure a purchase is genuine and is credited only once, the app sends our server the purchase proof given by the store (the Google Play purchase token or the App Store transaction identifier), the product and the store. The server checks it with Google Play or the App Store and answers with a signed confirmation. For this the app signs you in anonymously with Firebase Authentication the first time it contacts the server, when you make a purchase: no email, name or password is involved, only a random identifier.</p>
+<ul>
+  <li><strong>What our server keeps</strong> for each verified purchase: the random identifier, the store, the product, the state (credited or refunded), the dates and, for the unlimited unlock, its expiry date. The purchase proof is kept only as a one-way hash.</li>
+  <li><strong>Where.</strong> The server runs on Google Cloud (Cloud Functions and Firestore, region europe-west1, Belgium). Google processes this data on our behalf, under the Firebase privacy information.</li>
+  <li><strong>Why.</strong> To provide the service you purchased (Art. 6(1)(b) GDPR) and, on the basis of our legitimate interest, to prevent fraud and the same purchase being used twice (Art. 6(1)(f) GDPR).</li>
+  <li><strong>How long.</strong> Purchase records are kept as long as they are needed to handle refunds and to prevent fraud.</li>
+  <li><strong>Offline.</strong> If the server cannot be reached, the app keeps working and checks the purchase later. A purchase that is not verified within 7 days, or that the store refunds, loses its credit.</li>
+</ul>
+<p>Your token balance and your history stay on your device.</p>
 
 <h2>What we do not do</h2>
 <ul>
-  <li>No account or sign-in is required.</li>
+  <li>No account, email or password is required. The only identifier on our server is the random anonymous one used to verify purchases.</li>
   <li>No analytics in the app. The only diagnostic data is the technical error reports described above.</li>
   <li>We do not sell your data and we do not collect your name, email address or location.</li>
 </ul>
@@ -57,7 +66,7 @@
 <h2>Residents of US states</h2>
 <p>If you live in a US state with a consumer privacy law (for example California, Colorado, Connecticut, Texas or Virginia), you have the right to know what personal information is collected, to ask for its deletion and to opt out of its sale or sharing for targeted advertising.</p>
 <ul>
-  <li>We do not sell personal information and we do not hold personal data about you.</li>
+  <li>We do not sell personal information. The only data we hold on our server is a random anonymous identifier linked to your purchases, as described above.</li>
   <li>Google AdMob and its partners may use your advertising identifier and device information to show ads, which some laws consider "sharing" for cross-context behavioural advertising. You can opt out from the privacy choices of the app (shown in the app's settings when your location requires it) or by limiting ad personalisation in your device settings.</li>
   <li>We do not discriminate against you for exercising these rights.</li>
 </ul>
@@ -66,7 +75,7 @@
 <p>The app is not directed at children under 13 (or the minimum age in your country) and we do not knowingly collect their data.</p>
 
 <h2>Your rights</h2>
-<p>We do not hold personal data about you on our servers. For data processed by Google (AdMob and Firebase Crashlytics), you can exercise your rights (access, deletion, objection) with Google. If you are in the EEA, you also have the right to complain to your local data protection authority. For any question, write to <a href="mailto:crestimsupport@gmail.com">crestimsupport@gmail.com</a>.</p>
+<p>The only data we hold on our servers is the random anonymous identifier and the purchase records described above. To ask for access to or deletion of these records, write to <a href="mailto:crestimsupport@gmail.com">crestimsupport@gmail.com</a> with the receipt of your purchase from the store. Because the identifier is anonymous, we can act only on the records we are able to associate with the purchase you show us. For data processed by Google (AdMob and Firebase Crashlytics), you can exercise your rights (access, deletion, objection) with Google. If you are in the EEA, you also have the right to complain to your local data protection authority. For any question, write to <a href="mailto:crestimsupport@gmail.com">crestimsupport@gmail.com</a>.</p>
 
 <h2>Changes</h2>
 <p>If this policy changes, the new version will be published at this address with a new date.</p>
